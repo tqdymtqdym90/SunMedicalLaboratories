@@ -300,3 +300,64 @@ hr {
 .contact-item:last-child {
     border-bottom: none;
 }
+
+/* قسم الإحصائيات والعدادات */
+.stat-item {
+    padding: 2rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+}
+
+.stat-item i {
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.stat-item:hover i {
+    transform: scale(1.1);
+}
+
+.counter {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+    display: block;
+    line-height: 1;
+}
+
+/* تأثيرات العدادات المتحركة */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.counter.animate {
+    animation: countUp 0.8s ease-out;
+}
+
+/* تحسينات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .stat-item {
+        padding: 1.5rem 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .stat-item i {
+        font-size: 2.5rem !important;
+    }
+
+    .counter {
+        font-size: 2.5rem;
+    }
+}

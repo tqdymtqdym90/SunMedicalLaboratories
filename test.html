@@ -29,6 +29,26 @@
             padding: 4rem 0;
             text-align: center;
         }
+        .stat-item {
+            padding: 2rem 1rem;
+            transition: all 0.3s ease;
+        }
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+        .counter {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .counter.animate {
+            animation: countUp 0.6s ease-out;
+        }
     </style>
 </head>
 <body>
@@ -126,6 +146,43 @@
                     <div class="alert alert-warning" role="alert">
                         <i class="fas fa-exclamation-triangle me-2"></i>
                         تنبيه تحذير
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counters Test -->
+    <section class="test-section bg-primary text-white">
+        <div class="container">
+            <h2 class="text-center mb-4">اختبار العدادات المتحركة</h2>
+            <div class="row text-center">
+                <div class="col-md-3 mb-3">
+                    <div class="stat-item">
+                        <i class="fas fa-users fa-3x mb-3 text-warning"></i>
+                        <h3 class="counter text-white" data-target="1234">0</h3>
+                        <p class="text-white-50">مريض سعيد</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="stat-item">
+                        <i class="fas fa-flask fa-3x mb-3 text-warning"></i>
+                        <h3 class="counter text-white" data-target="5678">0</h3>
+                        <p class="text-white-50">تحليل مكتمل</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="stat-item">
+                        <i class="fas fa-award fa-3x mb-3 text-warning"></i>
+                        <h3 class="counter text-white" data-target="15">0</h3>
+                        <p class="text-white-50">سنة خبرة</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="stat-item">
+                        <i class="fas fa-map-marker-alt fa-3x mb-3 text-warning"></i>
+                        <h3 class="counter text-white" data-target="2">0</h3>
+                        <p class="text-white-50">فرع</p>
                     </div>
                 </div>
             </div>
@@ -250,7 +307,52 @@
                 document.getElementById('fonts-status').className = 'text-danger';
             }
             document.body.removeChild(testText);
+
+            // اختبار العدادات
+            initCounters();
         });
+
+        // تهيئة العدادات
+        function initCounters() {
+            const counters = document.querySelectorAll('.counter');
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                let current = 0;
+                let startTime = null;
+
+                const easeOutQuart = (t) => 1 - (--t) * t * t * t;
+
+                const updateCounter = (timestamp) => {
+                    if (!startTime) startTime = timestamp;
+                    const progress = Math.min((timestamp - startTime) / duration, 1);
+
+                    current = target * easeOutQuart(progress);
+                    const formattedNumber = Math.floor(current).toLocaleString('ar-SA');
+                    counter.textContent = formattedNumber;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target.toLocaleString('ar-SA');
+                    }
+                };
+
+                const counterObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                requestAnimationFrame(updateCounter);
+                            }, Math.random() * 500);
+                            counterObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                counterObserver.observe(counter);
+            });
+        }
     </script>
 </body>
 </html>

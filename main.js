@@ -250,34 +250,60 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // إضافة وظائف إضافية للموقع
     
-    // تأثير العد التصاعدي للأرقام
+    // تأثير العد التصاعدي للأرقام المحسن
     const counters = document.querySelectorAll('.counter');
-    
+
     counters.forEach(counter => {
         const target = parseInt(counter.getAttribute('data-target'));
-        const increment = target / 100;
+        const duration = 2000; // مدة العد بالميلي ثانية
+        const increment = target / (duration / 16); // 60 FPS
         let current = 0;
-        
-        const updateCounter = () => {
-            if (current < target) {
-                current += increment;
-                counter.textContent = Math.ceil(current);
-                setTimeout(updateCounter, 20);
+        let startTime = null;
+
+        const easeOutQuart = (t) => 1 - (--t) * t * t * t;
+
+        const updateCounter = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+
+            current = target * easeOutQuart(progress);
+
+            // تنسيق الرقم مع فواصل الآلاف
+            const formattedNumber = Math.floor(current).toLocaleString('ar-SA');
+            counter.textContent = formattedNumber;
+
+            // إضافة تأثير النبض أثناء العد
+            counter.classList.add('counting');
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = target;
+                counter.textContent = target.toLocaleString('ar-SA');
+                counter.classList.remove('counting');
+                counter.classList.add('completed');
+
+                // تأثير الانتهاء
+                setTimeout(() => {
+                    counter.classList.add('animate');
+                }, 100);
             }
         };
-        
+
         // بدء العد عند ظهور العنصر
         const counterObserver = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    updateCounter();
+                    // تأخير بسيط لتأثير أفضل
+                    setTimeout(() => {
+                        requestAnimationFrame(updateCounter);
+                    }, Math.random() * 500); // تأخير عشوائي لتأثير متدرج
                     counterObserver.unobserve(entry.target);
                 }
             });
+        }, {
+            threshold: 0.5 // بدء العد عندما يكون 50% من العنصر مرئي
         });
-        
+
         counterObserver.observe(counter);
     });
 
