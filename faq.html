@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة - مختبرات الشمس الطبية</title>
+    <meta name="description" content="إجابات على أكثر الأسئلة شيوعاً حول خدمات مختبرات الشمس الطبية، التحاليل، المواعيد، والنتائج">
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/11.jpg" alt="مختبرات الشمس الطبية" class="logo-img">
+                <span class="logo-text">مختبرات الشمس الطبية</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">عن مختبرات الشمس</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary ms-3">احجز موعدك الآن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">الأسئلة الشائعة</h1>
+                    <p class="lead mb-0">إجابات على أكثر الأسئلة شيوعاً حول خدماتنا وتحاليلنا الطبية</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fas fa-question-circle" style="font-size: 8rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search FAQ -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="search-box">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="faqSearch" placeholder="ابحث في الأسئلة الشائعة...">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">تصفح حسب الفئة</h2>
+                <p class="text-muted">اختر الفئة التي تهمك للوصول السريع للإجابات</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="faq-category-card" data-category="appointments">
+                        <div class="category-icon">
+                            <i class="fas fa-calendar-alt text-primary"></i>
+                        </div>
+                        <h5>المواعيد والحجز</h5>
+                        <p class="text-muted">أسئلة حول حجز المواعيد والمواعيد المتاحة</p>
+                        <span class="question-count">8 أسئلة</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="faq-category-card" data-category="tests">
+                        <div class="category-icon">
+                            <i class="fas fa-vial text-success"></i>
+                        </div>
+                        <h5>التحاليل والفحوصات</h5>
+                        <p class="text-muted">معلومات عن أنواع التحاليل والتحضير لها</p>
+                        <span class="question-count">12 سؤال</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="faq-category-card" data-category="results">
+                        <div class="category-icon">
+                            <i class="fas fa-file-medical text-warning"></i>
+                        </div>
+                        <h5>النتائج والتقارير</h5>
+                        <p class="text-muted">أسئلة حول استلام النتائج وفهمها</p>
+                        <span class="question-count">6 أسئلة</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="faq-category-card" data-category="payment">
+                        <div class="category-icon">
+                            <i class="fas fa-credit-card text-info"></i>
+                        </div>
+                        <h5>الدفع والتأمين</h5>
+                        <p class="text-muted">معلومات عن طرق الدفع والتأمين الطبي</p>
+                        <span class="question-count">5 أسئلة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    
+                    <!-- Appointments Category -->
+                    <div class="faq-section" data-category="appointments">
+                        <h3 class="faq-section-title">
+                            <i class="fas fa-calendar-alt me-3"></i>المواعيد والحجز
+                        </h3>
+                        
+                        <div class="accordion mb-5" id="appointmentsAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#appointment1">
+                                        كيف يمكنني حجز موعد؟
+                                    </button>
+                                </h2>
+                                <div id="appointment1" class="accordion-collapse collapse show" data-bs-parent="#appointmentsAccordion">
+                                    <div class="accordion-body">
+                                        يمكنك حجز موعد بعدة طرق سهلة:
+                                        <ul>
+                                            <li>الاتصال بنا على الأرقام: 07770365517 أو 07733334356</li>
+                                            <li>زيارة موقعنا الإلكتروني وملء نموذج الحجز</li>
+                                            <li>زيارة أي من فروعنا مباشرة</li>
+                                            <li>عبر تطبيق الهاتف المحمول (قريباً)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#appointment2">
+                                        ما هي ساعات العمل؟
+                                    </button>
+                                </h2>
+                                <div id="appointment2" class="accordion-collapse collapse" data-bs-parent="#appointmentsAccordion">
+                                    <div class="accordion-body">
+                                        ساعات عملنا هي:
+                                        <ul>
+                                            <li><strong>جميع الأيام:</strong> من الـ ٨ صباحاً وحتى الـ ٨ مساءً</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#appointment3">
+                                        هل يمكنني إلغاء أو تعديل موعدي؟
+                                    </button>
+                                </h2>
+                                <div id="appointment3" class="accordion-collapse collapse" data-bs-parent="#appointmentsAccordion">
+                                    <div class="accordion-body">
+                                        نعم، يمكنك إلغاء أو تعديل موعدك بسهولة:
+                                        <ul>
+                                            <li>الاتصال بنا قبل 24 ساعة على الأقل من الموعد</li>
+                                            <li>لا توجد رسوم إلغاء إذا تم الإلغاء قبل 24 ساعة</li>
+                                            <li>يمكن تعديل الموعد حسب توفر المواعيد</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tests Category -->
+                    <div class="faq-section" data-category="tests">
+                        <h3 class="faq-section-title">
+                            <i class="fas fa-vial me-3"></i>التحاليل والفحوصات
+                        </h3>
+                        
+                        <div class="accordion mb-5" id="testsAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#test1">
+                                        هل أحتاج للصيام قبل التحاليل؟
+                                    </button>
+                                </h2>
+                                <div id="test1" class="accordion-collapse collapse" data-bs-parent="#testsAccordion">
+                                    <div class="accordion-body">
+                                        يعتمد ذلك على نوع التحليل:
+                                        <ul>
+                                            <li><strong>تحاليل تتطلب صيام 8-12 ساعة:</strong> السكر الصائم، الدهون الثلاثية، الكوليسترول</li>
+                                            <li><strong>تحاليل لا تتطلب صيام:</strong> عد الدم الكامل، وظائف الكلى، معظم الهرمونات</li>
+                                            <li>سنخبرك بالتعليمات المحددة عند حجز الموعد</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#test2">
+                                        ما هي التحاليل الأكثر شيوعاً؟
+                                    </button>
+                                </h2>
+                                <div id="test2" class="accordion-collapse collapse" data-bs-parent="#testsAccordion">
+                                    <div class="accordion-body">
+                                        التحاليل الأكثر طلباً في مختبرنا:
+                                        <ul>
+                                            <li>عد الدم الكامل (CBC)</li>
+                                            <li>وظائف الكلى والكبد</li>
+                                            <li>السكر الصائم والتراكمي</li>
+                                            <li>الدهون الثلاثية والكوليسترول</li>
+                                            <li>هرمونات الغدة الدرقية</li>
+                                            <li>فيتامين د وب12</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#test3">
+                                        هل تقدمون خدمة السحب المنزلي؟
+                                    </button>
+                                </h2>
+                                <div id="test3" class="accordion-collapse collapse" data-bs-parent="#testsAccordion">
+                                    <div class="accordion-body">
+                                        نعم، نقدم خدمة السحب المنزلي في جميع أنحاء ديالى:
+                                        <ul>
+                                            <li>متاح جميع أيام الأسبوع</li>
+                                            <li>فريق متخصص ومدرب</li>
+                                            <li>معدات معقمة وآمنة</li>
+                                            <li>يجب الحجز مسبقاً</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results Category -->
+                    <div class="faq-section" data-category="results">
+                        <h3 class="faq-section-title">
+                            <i class="fas fa-file-medical me-3"></i>النتائج والتقارير
+                        </h3>
+                        
+                        <div class="accordion mb-5" id="resultsAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#result1">
+                                        كم من الوقت تستغرق النتائج؟
+                                    </button>
+                                </h2>
+                                <div id="result1" class="accordion-collapse collapse" data-bs-parent="#resultsAccordion">
+                                    <div class="accordion-body">
+                                        أوقات ظهور النتائج تختلف حسب نوع التحليل:
+                                        <ul>
+                                            <li><strong>التحاليل الأساسية:</strong> 2-6 ساعات</li>
+                                            <li><strong>التحاليل العادية:</strong> 24 ساعة</li>
+                                            <li><strong>تحاليل الهرمونات:</strong> 1-2 يوم عمل</li>
+                                            <li><strong>التحاليل المتخصصة:</strong> 3-5 أيام عمل</li>
+                                            <li><strong>الفحوصات الجينية:</strong> 1-2 أسبوع</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#result2">
+                                        كيف يمكنني الحصول على النتائج؟
+                                    </button>
+                                </h2>
+                                <div id="result2" class="accordion-collapse collapse" data-bs-parent="#resultsAccordion">
+                                    <div class="accordion-body">
+                                        يمكنك الحصول على النتائج بعدة طرق:
+                                        <ul>
+                                            <li>استلام مباشر من المختبر</li>
+                                            <li>إرسال عبر البريد الإلكتروني (PDF)</li>
+                                            <li>إرسال عبر الواتساب</li>
+                                            <li>الاتصال الهاتفي للنتائج العاجلة</li>
+                                            <li>عبر تطبيق الهاتف (قريباً)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Category -->
+                    <div class="faq-section" data-category="payment">
+                        <h3 class="faq-section-title">
+                            <i class="fas fa-credit-card me-3"></i>الدفع والتأمين
+                        </h3>
+                        
+                        <div class="accordion mb-5" id="paymentAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#payment1">
+                                        ما هي طرق الدفع المتاحة؟
+                                    </button>
+                                </h2>
+                                <div id="payment1" class="accordion-collapse collapse" data-bs-parent="#paymentAccordion">
+                                    <div class="accordion-body">
+                                        نقبل جميع طرق الدفع التالية:
+                                        <ul>
+                                            <li>النقد</li>
+                                            <li>بطاقات الائتمان (فيزا، ماستركارد)</li>
+                                            <li>بطاقات مدى</li>
+                                            <li>التحويل البنكي</li>
+                                            <li>المحافظ الإلكترونية (STC Pay، Apple Pay)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#payment2">
+                                        هل تقبلون التأمين الطبي؟
+                                    </button>
+                                </h2>
+                                <div id="payment2" class="accordion-collapse collapse" data-bs-parent="#paymentAccordion">
+                                    <div class="accordion-body">
+                                        نعم، نتعامل مع معظم شركات التأمين في المملكة:
+                                        <ul>
+                                            <li>بوبا العربية</li>
+                                            <li>التعاونية للتأمين</li>
+                                            <li>شركة الراجحي للتأمين</li>
+                                            <li>ميدغلف</li>
+                                            <li>وشركات أخرى كثيرة</li>
+                                        </ul>
+                                        يرجى إحضار بطاقة التأمين عند الزيارة.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="still-questions-card">
+                        <i class="fas fa-question-circle fa-3x text-primary mb-4"></i>
+                        <h3 class="fw-bold mb-3">لم تجد إجابة لسؤالك؟</h3>
+                        <p class="text-muted mb-4">
+                            فريقنا المتخصص جاهز للإجابة على جميع استفساراتك. 
+                            لا تتردد في التواصل معنا للحصول على المساعدة التي تحتاجها.
+                        </p>
+                        <div class="contact-options">
+                            <a href="contact.html" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-envelope me-2"></i>أرسل سؤالك
+                            </a>
+                            <a href="tel:07770365517" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-phone me-2"></i>اتصل بنا
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">مختبرات الشمس الطبية</h5>
+                    <p class="text-muted">
+                        نلتزم بتقديم أفضل خدمات التحاليل الطبية بأعلى معايير الجودة والدقة.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h6 class="mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-muted">الرئيسية</a></li>
+                        <li><a href="about.html" class="text-muted">عنا</a></li>
+                        <li><a href="services.html" class="text-muted">خدماتنا</a></li>
+                        <li><a href="contact.html" class="text-muted">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">خدماتنا</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="text-muted">تحاليل الدم</a></li>
+                        <li><a href="services.html" class="text-muted">تحاليل الهرمونات</a></li>
+                        <li><a href="services.html" class="text-muted">تحاليل البول</a></li>
+                        <li><a href="services.html" class="text-muted">السحب المنزلي</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">اتصل بنا</h6>
+                    <p class="text-muted mb-1"><i class="fas fa-phone me-2"></i>07770365517</p>
+                    <p class="text-muted mb-1"><i class="fas fa-phone me-2"></i>07733334356</p>
+                    <p class="text-muted mb-1"><i class="fas fa-envelope me-2"></i>info@sunlabs.com</p>
+                    <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i>ديالى، العراق</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 مختبرات الشمس الطبية. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-muted me-3">سياسة الخصوصية</a>
+                    <a href="#" class="text-muted">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    
+    <!-- FAQ Search Script -->
+    <script>
+        document.getElementById('faqSearch').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            
+            accordionItems.forEach(item => {
+                const question = item.querySelector('.accordion-button').textContent.toLowerCase();
+                const answer = item.querySelector('.accordion-body').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = searchTerm === '' ? 'block' : 'none';
+                }
+            });
+        });
+
+        // Category filtering
+        document.querySelectorAll('.faq-category-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const category = this.dataset.category;
+                const sections = document.querySelectorAll('.faq-section');
+                
+                sections.forEach(section => {
+                    if (section.dataset.category === category) {
+                        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

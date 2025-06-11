@@ -1,0 +1,43 @@
+{
+  "name": "مختبرات الشمس الطبية",
+  "short_name": "مختبرات الشمس",
+  "description": "مختبرات الشمس الطبية - دقة، موثوقية، رعاية. نقدم أفضل خدمات التحاليل الطبية بأحدث التقنيات",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2c5aa0",
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["medical", "healthcare", "laboratory"],
+  "icons": [
+    {
+      "src": "images/11.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "images/12.JPG",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "حجز موعد",
+      "short_name": "حجز",
+      "description": "احجز موعدك للتحاليل الطبية",
+      "url": "./contact.html",
+
+    },
+    {
+      "name": "اتصل بنا",
+      "short_name": "اتصال",
+      "description": "تواصل معنا للاستفسارات",
+      "url": "./contact.html"
+    }
+  ]
+}

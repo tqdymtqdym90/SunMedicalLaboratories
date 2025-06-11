@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# السماح لجميع محركات البحث بفهرسة الموقع
+Allow: /index.html
+Allow: /about.html
+Allow: /services.html
+Allow: /tests.html
+Allow: /partners.html
+Allow: /contact.html
+Allow: /blog.html
+Allow: /faq.html
+
+# السماح بفهرسة الملفات الثابتة
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# منع فهرسة الملفات الحساسة أو غير المرغوب فيها
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.log
+Disallow: /temp/
+Disallow: /backup/
+
+# خريطة الموقع
+Sitemap: https://sunlabs.com/sitemap.xml
+
+# معلومات إضافية لمحركات البحث
+# Crawl-delay: 1
+
+# تعليمات خاصة لمحركات بحث معينة
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
