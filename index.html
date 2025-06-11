@@ -32,60 +32,247 @@
     <link rel="apple-touch-icon" href="images/11.jpg">
 
     <!-- Bootstrap 5 RTL CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeJea9ozHvlELRJf3uHVdGJ5TzIj3Rs" crossorigin="anonymous">
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
     <!-- Google Fonts Arabic -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="./css/style.css" rel="stylesheet">
     <!-- Fallback CSS -->
     <link href="./css/fallback.css" rel="stylesheet">
 
-    <!-- Fallback CSS for GitHub Pages -->
+    <!-- Enhanced Inline CSS for GitHub Pages -->
     <style>
-        /* Fallback styles in case external CSS doesn't load */
+        /* Core styles to ensure proper display */
         body {
-            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            direction: rtl;
-            text-align: right;
+            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+            direction: rtl !important;
+            text-align: right !important;
+            line-height: 1.6;
+            color: #333;
         }
+
+        /* Navigation */
         .navbar {
             background-color: #ffffff !important;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+            padding: 1rem 0 !important;
         }
+
+        .navbar-brand {
+            font-weight: bold !important;
+            color: #2c5aa0 !important;
+        }
+
+        /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d72 100%);
-            min-height: 100vh;
-            color: white;
-            padding-top: 120px;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d72 100%) !important;
+            min-height: 100vh !important;
+            color: white !important;
+            padding-top: 120px !important;
+            display: flex !important;
+            align-items: center !important;
         }
+
+        /* Buttons */
         .btn-primary {
-            background-color: #2c5aa0;
-            border-color: #2c5aa0;
+            background-color: #2c5aa0 !important;
+            border-color: #2c5aa0 !important;
+            color: white !important;
         }
+
         .btn-warning {
-            background-color: #ffc107;
-            border-color: #ffc107;
-            color: #000;
+            background-color: #ffc107 !important;
+            border-color: #ffc107 !important;
+            color: #000 !important;
         }
+
+        .btn-outline-light {
+            border-color: white !important;
+            color: white !important;
+            background-color: transparent !important;
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            background: #2c5aa0 !important;
+            color: white !important;
+            padding: 4rem 0 !important;
+        }
+
+        .stat-item {
+            text-align: center !important;
+            padding: 2rem 1rem !important;
+            transition: transform 0.3s ease !important;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px) !important;
+        }
+
+        .counter {
+            font-size: 3.5rem !important;
+            font-weight: 700 !important;
+            margin: 1rem 0 !important;
+            display: block !important;
+            line-height: 1 !important;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: white !important;
+            padding: 2rem !important;
+            border-radius: 15px !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+            margin-bottom: 2rem !important;
+            transition: transform 0.3s ease !important;
+            height: 100% !important;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) !important;
+        }
+
+        .service-icon {
+            width: 80px !important;
+            height: 80px !important;
+            margin: 0 auto 1.5rem !important;
+            background: #f8f9fa !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 2rem !important;
+            color: #2c5aa0 !important;
+        }
+
+        /* Testimonial Cards */
+        .testimonial-card {
+            background: white !important;
+            padding: 2rem !important;
+            border-radius: 15px !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+            margin-bottom: 2rem !important;
+            transition: transform 0.3s ease !important;
+            height: 100% !important;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px) !important;
+        }
+
+        /* Colors */
         .text-primary { color: #2c5aa0 !important; }
         .text-success { color: #28a745 !important; }
         .text-warning { color: #ffc107 !important; }
         .text-danger { color: #dc3545 !important; }
         .text-info { color: #17a2b8 !important; }
+        .text-white { color: #ffffff !important; }
+        .text-muted { color: #6c757d !important; }
+        .text-white-50 { color: rgba(255, 255, 255, 0.5) !important; }
+
         .bg-light { background-color: #f8f9fa !important; }
         .bg-dark { background-color: #343a40 !important; }
-        .py-5 { padding-top: 3rem; padding-bottom: 3rem; }
-        .mb-4 { margin-bottom: 1.5rem; }
-        .container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
-        .row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
-        .col-lg-6, .col-md-4, .col-lg-4 { flex: 0 0 auto; padding: 0 15px; }
-        .col-lg-6 { width: 50%; }
-        .col-md-4 { width: 33.333333%; }
-        .col-lg-4 { width: 33.333333%; }
+        .bg-primary { background-color: #2c5aa0 !important; }
+
+        /* Spacing */
+        .py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+        .py-4 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+        .mb-4 { margin-bottom: 1.5rem !important; }
+        .mb-3 { margin-bottom: 1rem !important; }
+        .mb-5 { margin-bottom: 3rem !important; }
+        .me-3 { margin-left: 1rem !important; }
+        .me-2 { margin-left: 0.5rem !important; }
+
+        /* Layout */
+        .container {
+            max-width: 1140px !important;
+            margin: 0 auto !important;
+            padding: 0 15px !important;
+            width: 100% !important;
+        }
+
+        .row {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            margin: 0 -15px !important;
+        }
+
+        .col-lg-6, .col-md-4, .col-lg-4, .col-lg-3, .col-md-6 {
+            flex: 0 0 auto !important;
+            padding: 0 15px !important;
+            width: 100% !important;
+        }
+
+        /* Typography */
+        .text-center { text-align: center !important; }
+        .fw-bold { font-weight: bold !important; }
+        .lead { font-size: 1.25rem !important; font-weight: 300 !important; }
+        .display-4 { font-size: 2.5rem !important; font-weight: 300 !important; }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .col-md-4 { width: 33.333333% !important; }
+            .col-md-6 { width: 50% !important; }
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-3 { width: 25% !important; }
+            .col-lg-4 { width: 33.333333% !important; }
+            .col-lg-6 { width: 50% !important; }
+        }
+
         @media (max-width: 768px) {
-            .col-lg-6, .col-md-4, .col-lg-4 { width: 100%; }
+            .hero-section {
+                text-align: center !important;
+                padding-top: 100px !important;
+            }
+
+            .display-4 {
+                font-size: 2rem !important;
+            }
+
+            .counter {
+                font-size: 2.5rem !important;
+            }
+
+            .stat-item {
+                padding: 1.5rem 0.5rem !important;
+                margin-bottom: 2rem !important;
+            }
+        }
+
+        /* Animations */
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .counter.animate {
+            animation: countUp 0.8s ease-out !important;
+        }
+
+        /* Footer */
+        footer {
+            background: #343a40 !important;
+            color: white !important;
+            padding: 3rem 0 !important;
+        }
+
+        footer a {
+            color: #6c757d !important;
+            text-decoration: none !important;
+        }
+
+        footer a:hover {
+            color: #ffc107 !important;
         }
     </style>
 
@@ -512,7 +699,7 @@
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <script src="./js/main.js"></script>
 </body>

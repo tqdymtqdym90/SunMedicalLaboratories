@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مختبرات الشمس الطبية - أفضل خدمات التحاليل الطبية في العراق</title>
+    <meta name="description" content="مختبرات الشمس الطبية تقدم أفضل خدمات التحاليل الطبية بأحدث التقنيات في العراق. احجز موعدك الآن!">
+    <meta name="keywords" content="مختبرات, تحاليل طبية, العراق, ديالى, بعقوبة, تحاليل الدم, الهرمونات">
+    <meta name="author" content="مختبرات الشمس الطبية">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="مختبرات الشمس الطبية - أفضل خدمات التحاليل الطبية">
+    <meta property="og:description" content="نقدم أفضل خدمات التحاليل الطبية بأحدث التقنيات وأعلى معايير الجودة">
+    <meta property="og:image" content="https://mohmmadmustaf2025.github.io/SunMedicalLaboratories/images/12.JPG">
+    <meta property="og:url" content="https://mohmmadmustaf2025.github.io/SunMedicalLaboratories/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="مختبرات الشمس الطبية">
+    <meta name="twitter:description" content="أفضل خدمات التحاليل الطبية في العراق">
+    <meta name="twitter:image" content="https://mohmmadmustaf2025.github.io/SunMedicalLaboratories/images/12.JPG">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/11.jpg">
+    <link rel="apple-touch-icon" href="images/11.jpg">
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeJea9ozHvlELRJf3uHVdGJ5TzIj3Rs" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
+    <!-- Google Fonts Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* تنسيقات أساسية مضمنة */
+        :root {
+            --primary-color: #2c5aa0;
+            --secondary-color: #28a745;
+            --accent-color: #ffc107;
+            --text-dark: #333333;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+            direction: rtl !important;
+            text-align: right !important;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: var(--white) !important;
+            box-shadow: var(--shadow) !important;
+            padding: 1rem 0 !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-brand {
+            font-weight: bold !important;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 12px;
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e3d72 100%) !important;
+            min-height: 100vh !important;
+            color: var(--white) !important;
+            padding-top: 120px !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-image {
+            text-align: center;
+            animation: fadeInRight 1s ease-out 0.3s both;
+        }
+        
+        /* Buttons */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color) !important;
+            border-color: var(--primary-color) !important;
+            color: var(--white) !important;
+        }
+        
+        .btn-warning {
+            background-color: var(--accent-color) !important;
+            border-color: var(--accent-color) !important;
+            color: #000 !important;
+        }
+        
+        .btn-outline-light {
+            border-color: var(--white) !important;
+            color: var(--white) !important;
+            background-color: transparent !important;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Statistics Section */
+        .stats-section {
+            background: var(--primary-color) !important;
+            color: var(--white) !important;
+            padding: 4rem 0 !important;
+        }
+        
+        .stat-item {
+            text-align: center !important;
+            padding: 2rem 1rem !important;
+            transition: transform 0.3s ease !important;
+            position: relative;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px) !important;
+        }
+        
+        .stat-item i {
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-item:hover i {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .counter {
+            font-size: 3.5rem !important;
+            font-weight: 700 !important;
+            margin: 1rem 0 !important;
+            display: block !important;
+            line-height: 1 !important;
+        }
+        
+        /* Service Cards */
+        .service-card {
+            background: var(--white) !important;
+            padding: 2rem !important;
+            border-radius: 15px !important;
+            box-shadow: var(--shadow) !important;
+            margin-bottom: 2rem !important;
+            transition: transform 0.3s ease !important;
+            height: 100% !important;
+            border-top: 4px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) !important;
+            border-top-color: var(--primary-color);
+        }
+        
+        .service-icon {
+            width: 80px !important;
+            height: 80px !important;
+            margin: 0 auto 1.5rem !important;
+            background: var(--bg-light) !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 2rem !important;
+            color: var(--primary-color) !important;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            background: var(--primary-color) !important;
+            color: var(--white) !important;
+            transform: scale(1.1);
+        }
+        
+        /* Testimonial Cards */
+        .testimonial-card {
+            background: var(--white) !important;
+            padding: 2rem !important;
+            border-radius: 15px !important;
+            box-shadow: var(--shadow) !important;
+            margin-bottom: 2rem !important;
+            transition: transform 0.3s ease !important;
+            height: 100% !important;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px) !important;
+        }
+        
+        .stars {
+            color: var(--accent-color) !important;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1140px !important;
+            margin: 0 auto !important;
+            padding: 0 15px !important;
+            width: 100% !important;
+        }
+        
+        .row {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            margin: 0 -15px !important;
+        }
+        
+        .col-lg-6, .col-md-4, .col-lg-4, .col-lg-3, .col-md-6, .col-lg-8 {
+            flex: 0 0 auto !important;
+            padding: 0 15px !important;
+            width: 100% !important;
+        }
+        
+        /* Spacing */
+        .py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+        .py-4 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+        .mb-4 { margin-bottom: 1.5rem !important; }
+        .mb-3 { margin-bottom: 1rem !important; }
+        .mb-5 { margin-bottom: 3rem !important; }
+        .me-3 { margin-left: 1rem !important; }
+        .me-2 { margin-left: 0.5rem !important; }
+        
+        /* Typography */
+        .text-center { text-align: center !important; }
+        .text-end { text-align: left !important; }
+        .fw-bold { font-weight: bold !important; }
+        .lead { font-size: 1.25rem !important; font-weight: 300 !important; }
+        .display-4 { font-size: 2.5rem !important; font-weight: 300 !important; }
+        
+        /* Colors */
+        .text-primary { color: var(--primary-color) !important; }
+        .text-success { color: var(--secondary-color) !important; }
+        .text-warning { color: var(--accent-color) !important; }
+        .text-white { color: var(--white) !important; }
+        .text-muted { color: var(--text-light) !important; }
+        .text-white-50 { color: rgba(255, 255, 255, 0.5) !important; }
+        
+        .bg-light { background-color: var(--bg-light) !important; }
+        .bg-dark { background-color: #343a40 !important; }
+        .bg-primary { background-color: var(--primary-color) !important; }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            .col-md-4 { width: 33.333333% !important; }
+            .col-md-6 { width: 50% !important; }
+        }
+        
+        @media (min-width: 992px) {
+            .col-lg-3 { width: 25% !important; }
+            .col-lg-4 { width: 33.333333% !important; }
+            .col-lg-6 { width: 50% !important; }
+            .col-lg-8 { width: 66.666667% !important; }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                text-align: center !important;
+                padding-top: 100px !important;
+            }
+            
+            .display-4 {
+                font-size: 2rem !important;
+            }
+            
+            .counter {
+                font-size: 2.5rem !important;
+            }
+            
+            .stat-item {
+                padding: 1.5rem 0.5rem !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            .service-card, .testimonial-card {
+                margin-bottom: 2rem !important;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .counter.animate {
+            animation: countUp 0.8s ease-out !important;
+        }
+        
+        /* Footer */
+        footer {
+            background: #343a40 !important;
+            color: var(--white) !important;
+            padding: 3rem 0 !important;
+        }
+        
+        footer a {
+            color: var(--text-light) !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--accent-color) !important;
+        }
+        
+        /* Contact Info */
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-item i {
+            margin-left: 1rem;
+            margin-top: 0.25rem;
+        }
+        
+        /* Map Container */
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+        
+        /* Utilities */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .rounded-3 {
+            border-radius: 0.5rem !important;
+        }
+        
+        .shadow-lg {
+            box-shadow: var(--shadow-lg) !important;
+        }
+        
+        .list-unstyled {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-left: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: #000 !important;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/11.jpg" alt="مختبرات الشمس الطبية" class="logo-img">
+                <span>مختبرات الشمس الطبية</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">عن مختبرات الشمس</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">الأسئلة الشائعة</a>
+                    </li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary ms-3">
+                    <i class="fas fa-calendar-check me-2"></i>احجز موعدك
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-4">مختبرات الشمس الطبية</h1>
+                        <p class="lead mb-4">نقدم أفضل خدمات التحاليل الطبية بأحدث التقنيات وأعلى معايير الجودة في العراق. فريق طبي متخصص وخبرة تمتد لأكثر من 15 عاماً.</p>
+                        <div>
+                            <a href="contact.html" class="btn btn-warning btn-lg me-3">
+                                <i class="fas fa-calendar-check me-2"></i>احجز موعدك الآن
+                            </a>
+                            <a href="services.html" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-microscope me-2"></i>تعرف على خدماتنا
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="images/12.JPG" alt="مختبرات الشمس الطبية" class="img-fluid rounded-3 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-primary mb-4">خدماتنا المتميزة</h2>
+                <p class="lead text-muted">نقدم مجموعة شاملة من التحاليل الطبية بأحدث التقنيات</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h5 class="text-center mb-3">تحاليل الدم الشاملة</h5>
+                        <p class="text-muted text-center">صورة دم كاملة، سكر، كوليسترول، وظائف الكبد والكلى، وجميع التحاليل الأساسية</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h5 class="text-center mb-3">تحاليل الهرمونات</h5>
+                        <p class="text-muted text-center">فحص شامل للهرمونات الذكرية والأنثوية، الغدة الدرقية، والهرمونات التناسلية</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-virus"></i>
+                        </div>
+                        <h5 class="text-center mb-3">تحاليل الأمراض المعدية</h5>
+                        <p class="text-muted text-center">فحص الالتهابات الفيروسية والبكتيرية، كوفيد-19، والأمراض المنقولة جنسياً</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h5 class="text-center mb-3">تحاليل القلب والأوعية</h5>
+                        <p class="text-muted text-center">فحص إنزيمات القلب، الدهون الثلاثية، وعوامل خطر أمراض القلب</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h5 class="text-center mb-3">تحاليل البول والبراز</h5>
+                        <p class="text-muted text-center">فحص شامل للبول والبراز لتشخيص التهابات المسالك البولية والجهاز الهضمي</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h5 class="text-center mb-3">خدمة السحب المنزلي</h5>
+                        <p class="text-muted text-center">نأتي إليك في منزلك لسحب العينات براحة تامة وبأعلى معايير السلامة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-white mb-4">إنجازاتنا بالأرقام</h2>
+                <p class="lead text-white-50">نفخر بثقة عملائنا وإنجازاتنا المتميزة</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <i class="fas fa-users fa-3x mb-3 text-warning"></i>
+                        <h3 class="counter text-white" data-target="50000">0</h3>
+                        <p class="text-white-50">مريض سعيد</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <i class="fas fa-flask fa-3x mb-3 text-warning"></i>
+                        <h3 class="counter text-white" data-target="200000">0</h3>
+                        <p class="text-white-50">تحليل مكتمل</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <i class="fas fa-award fa-3x mb-3 text-warning"></i>
+                        <h3 class="counter text-white" data-target="15">0</h3>
+                        <p class="text-white-50">سنة من الخبرة</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <i class="fas fa-map-marker-alt fa-3x mb-3 text-warning"></i>
+                        <h3 class="counter text-white" data-target="2">0</h3>
+                        <p class="text-white-50">فرع في العراق</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-primary mb-4">آراء عملائنا</h2>
+                <p class="lead text-muted">ما يقوله مرضانا عن خدماتنا</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="mb-3">"خدمة ممتازة ونتائج دقيقة. الفريق محترف جداً والمكان نظيف ومريح."</p>
+                        <div class="client-info">
+                            <strong>أحمد محمد</strong>
+                            <small class="text-muted d-block">مريض</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="mb-3">"سرعة في الخدمة ودقة في النتائج. أنصح الجميع بالتعامل مع مختبرات الشمس."</p>
+                        <div class="client-info">
+                            <strong>فاطمة علي</strong>
+                            <small class="text-muted d-block">مريضة</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="mb-3">"مختبر متميز بكل المقاييس. الأسعار معقولة والخدمة راقية."</p>
+                        <div class="client-info">
+                            <strong>محمد سالم</strong>
+                            <small class="text-muted d-block">مريض</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3 class="mb-4">موقعنا</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.123!2d44.6289!3d33.7489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQ0JzU2LjAiTiA0NMKwMzcnNDQuMCJF!5e0!3m2!1sar!2siq!4v1234567890"
+                                allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="mb-4">معلومات الاتصال</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            <div>
+                                <strong>العناوين:</strong><br>
+                                <strong>الفرع الأول:</strong> ديالى - بعقوبة الجديدة - شارع الطابو - مجاور مول النخبة<br>
+                                <strong>الفرع الثاني:</strong> ديالى - بعقوبة الجديدة - شارع الطابو - مقابل دائرة التسجيل العقاري
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone text-primary"></i>
+                            <div>
+                                <strong>الهاتف:</strong><br>
+                                <strong>الفرع الأول:</strong> 07770365517<br>
+                                <strong>الفرع الثاني:</strong> 07733334356
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <div>
+                                <strong>البريد الإلكتروني:</strong><br>
+                                info@sunlabs.com
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock text-primary"></i>
+                            <div>
+                                <strong>ساعات العمل:</strong><br>
+                                متواجدين جميع الأيام من الـ ٨ صباحاً وحتى الـ ٨ مساءً
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">مختبرات الشمس الطبية</h5>
+                    <p class="text-muted">
+                        نلتزم بتقديم أفضل خدمات التحاليل الطبية بأعلى معايير الجودة والدقة.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h6 class="mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-muted">الرئيسية</a></li>
+                        <li><a href="about.html" class="text-muted">عنا</a></li>
+                        <li><a href="services.html" class="text-muted">خدماتنا</a></li>
+                        <li><a href="contact.html" class="text-muted">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">خدماتنا</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="text-muted">تحاليل الدم</a></li>
+                        <li><a href="services.html" class="text-muted">تحاليل الهرمونات</a></li>
+                        <li><a href="services.html" class="text-muted">تحاليل البول</a></li>
+                        <li><a href="services.html" class="text-muted">السحب المنزلي</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">اتصل بنا</h6>
+                    <p class="text-muted mb-1"><i class="fas fa-phone me-2"></i>07770365517</p>
+                    <p class="text-muted mb-1"><i class="fas fa-phone me-2"></i>07733334356</p>
+                    <p class="text-muted mb-1"><i class="fas fa-envelope me-2"></i>info@sunlabs.com</p>
+                    <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i>ديالى، العراق</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2025 مختبرات الشمس الطبية. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-muted me-3">سياسة الخصوصية</a>
+                    <a href="#" class="text-muted">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Counter Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // تأثير العد التصاعدي للأرقام المحسن
+            const counters = document.querySelectorAll('.counter');
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // مدة العد بالميلي ثانية
+                let current = 0;
+                let startTime = null;
+
+                const easeOutQuart = (t) => 1 - (--t) * t * t * t;
+
+                const updateCounter = (timestamp) => {
+                    if (!startTime) startTime = timestamp;
+                    const progress = Math.min((timestamp - startTime) / duration, 1);
+
+                    current = target * easeOutQuart(progress);
+
+                    // تنسيق الرقم مع فواصل الآلاف
+                    const formattedNumber = Math.floor(current).toLocaleString('ar-SA');
+                    counter.textContent = formattedNumber;
+
+                    // إضافة تأثير النبض أثناء العد
+                    counter.classList.add('counting');
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target.toLocaleString('ar-SA');
+                        counter.classList.remove('counting');
+                        counter.classList.add('completed');
+
+                        // تأثير الانتهاء
+                        setTimeout(() => {
+                            counter.classList.add('animate');
+                        }, 100);
+                    }
+                };
+
+                // بدء العد عند ظهور العنصر
+                const counterObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // تأخير بسيط لتأثير أفضل
+                            setTimeout(() => {
+                                requestAnimationFrame(updateCounter);
+                            }, Math.random() * 500); // تأخير عشوائي لتأثير متدرج
+                            counterObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.5 // بدء العد عندما يكون 50% من العنصر مرئي
+                });
+
+                counterObserver.observe(counter);
+            });
+
+            console.log('🌞 مختبرات الشمس الطبية - تم تحميل الموقع بنجاح!');
+        });
+    </script>
+</body>
+</html>
