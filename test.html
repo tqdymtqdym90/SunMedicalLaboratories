@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار التنسيقات - مختبرات الشمس الطبية</title>
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- Google Fonts Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            text-align: right;
+            padding-top: 80px;
+        }
+        .test-section {
+            padding: 2rem 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .hero-test {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d72 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Test -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-flask text-primary me-2"></i>
+                <span class="fw-bold text-primary">مختبرات الشمس الطبية</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">عنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">خدماتنا</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary ms-3">احجز موعدك</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Test -->
+    <section class="hero-test">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">اختبار التنسيقات</h1>
+            <p class="lead mb-4">هذه صفحة اختبار للتأكد من عمل Bootstrap و Font Awesome</p>
+            <div>
+                <a href="#" class="btn btn-warning btn-lg me-3">
+                    <i class="fas fa-calendar-check me-2"></i>زر تجريبي
+                </a>
+                <a href="#" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-microscope me-2"></i>زر آخر
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Icons Test -->
+    <section class="test-section">
+        <div class="container">
+            <h2 class="text-center mb-4">اختبار الأيقونات</h2>
+            <div class="row text-center">
+                <div class="col-md-3 mb-3">
+                    <i class="fas fa-flask text-primary fa-3x mb-2"></i>
+                    <h5>مختبر</h5>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <i class="fas fa-heart text-danger fa-3x mb-2"></i>
+                    <h5>صحة</h5>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <i class="fas fa-user-md text-success fa-3x mb-2"></i>
+                    <h5>طبيب</h5>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <i class="fas fa-hospital text-info fa-3x mb-2"></i>
+                    <h5>مستشفى</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Components Test -->
+    <section class="test-section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">اختبار مكونات Bootstrap</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">بطاقة تجريبية</h5>
+                            <p class="card-text">هذا نص تجريبي للتأكد من عمل البطاقات.</p>
+                            <a href="#" class="btn btn-primary">زر</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="alert alert-success" role="alert">
+                        <i class="fas fa-check-circle me-2"></i>
+                        تنبيه نجاح
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="alert alert-warning" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        تنبيه تحذير
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors Test -->
+    <section class="test-section">
+        <div class="container">
+            <h2 class="text-center mb-4">اختبار الألوان</h2>
+            <div class="row text-center">
+                <div class="col-md-2 mb-3">
+                    <div class="p-3 bg-primary text-white rounded">أساسي</div>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <div class="p-3 bg-success text-white rounded">نجاح</div>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <div class="p-3 bg-warning text-dark rounded">تحذير</div>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <div class="p-3 bg-danger text-white rounded">خطر</div>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <div class="p-3 bg-info text-white rounded">معلومات</div>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <div class="p-3 bg-dark text-white rounded">داكن</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography Test -->
+    <section class="test-section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">اختبار الخطوط</h2>
+            <div class="text-center">
+                <h1>عنوان H1</h1>
+                <h2>عنوان H2</h2>
+                <h3>عنوان H3</h3>
+                <p class="lead">نص رئيسي (Lead)</p>
+                <p>نص عادي مع <strong>نص عريض</strong> و <em>نص مائل</em></p>
+                <p class="text-muted">نص باهت</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Display -->
+    <section class="test-section">
+        <div class="container">
+            <h2 class="text-center mb-4">حالة التحميل</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5>Bootstrap</h5>
+                            <div id="bootstrap-status" class="text-muted">جاري التحقق...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5>Font Awesome</h5>
+                            <div id="fontawesome-status" class="text-muted">جاري التحقق...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5>Google Fonts</h5>
+                            <div id="fonts-status" class="text-muted">جاري التحقق...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script>
+        // Check if Bootstrap is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check Bootstrap
+            if (typeof bootstrap !== 'undefined') {
+                document.getElementById('bootstrap-status').innerHTML = '<i class="fas fa-check text-success"></i> محمل بنجاح';
+                document.getElementById('bootstrap-status').className = 'text-success';
+            } else {
+                document.getElementById('bootstrap-status').innerHTML = '<i class="fas fa-times text-danger"></i> فشل التحميل';
+                document.getElementById('bootstrap-status').className = 'text-danger';
+            }
+            
+            // Check Font Awesome
+            const testIcon = document.createElement('i');
+            testIcon.className = 'fas fa-check';
+            document.body.appendChild(testIcon);
+            const iconStyle = window.getComputedStyle(testIcon);
+            if (iconStyle.fontFamily.includes('Font Awesome')) {
+                document.getElementById('fontawesome-status').innerHTML = '<i class="fas fa-check text-success"></i> محمل بنجاح';
+                document.getElementById('fontawesome-status').className = 'text-success';
+            } else {
+                document.getElementById('fontawesome-status').innerHTML = '<i class="fas fa-times text-danger"></i> فشل التحميل';
+                document.getElementById('fontawesome-status').className = 'text-danger';
+            }
+            document.body.removeChild(testIcon);
+            
+            // Check Google Fonts
+            const testText = document.createElement('span');
+            testText.style.fontFamily = 'Cairo';
+            testText.textContent = 'test';
+            document.body.appendChild(testText);
+            const textStyle = window.getComputedStyle(testText);
+            if (textStyle.fontFamily.includes('Cairo')) {
+                document.getElementById('fonts-status').innerHTML = '<i class="fas fa-check text-success"></i> محمل بنجاح';
+                document.getElementById('fonts-status').className = 'text-success';
+            } else {
+                document.getElementById('fonts-status').innerHTML = '<i class="fas fa-times text-danger"></i> فشل التحميل';
+                document.getElementById('fonts-status').className = 'text-danger';
+            }
+            document.body.removeChild(testText);
+        });
+    </script>
+</body>
+</html>

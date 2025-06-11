@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تشخيص مشاكل GitHub Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid;
+        }
+        .success {
+            background: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .warning {
+            background: #fff3cd;
+            border-color: #ffeaa7;
+            color: #856404;
+        }
+        .info {
+            background: #d1ecf1;
+            border-color: #bee5eb;
+            color: #0c5460;
+        }
+        .test-item {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .log {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 تشخيص مشاكل GitHub Pages</h1>
+        <p>هذه الصفحة تساعد في تشخيص مشاكل عدم ظهور التنسيقات على GitHub Pages</p>
+        
+        <div class="test-item">
+            <h3>1. معلومات الصفحة الحالية</h3>
+            <div id="page-info"></div>
+        </div>
+        
+        <div class="test-item">
+            <h3>2. اختبار تحميل Bootstrap</h3>
+            <button onclick="testBootstrap()">اختبار Bootstrap</button>
+            <div id="bootstrap-result"></div>
+        </div>
+        
+        <div class="test-item">
+            <h3>3. اختبار تحميل Font Awesome</h3>
+            <button onclick="testFontAwesome()">اختبار Font Awesome</button>
+            <div id="fontawesome-result"></div>
+        </div>
+        
+        <div class="test-item">
+            <h3>4. اختبار تحميل Google Fonts</h3>
+            <button onclick="testGoogleFonts()">اختبار Google Fonts</button>
+            <div id="fonts-result"></div>
+        </div>
+        
+        <div class="test-item">
+            <h3>5. اختبار تحميل CSS المخصص</h3>
+            <button onclick="testCustomCSS()">اختبار CSS المخصص</button>
+            <div id="css-result"></div>
+        </div>
+        
+        <div class="test-item">
+            <h3>6. اختبار الشبكة والاتصال</h3>
+            <button onclick="testNetwork()">اختبار الشبكة</button>
+            <div id="network-result"></div>
+        </div>
+        
+        <div class="test-item">
+            <h3>7. سجل الأخطاء</h3>
+            <button onclick="showConsoleErrors()">عرض أخطاء وحدة التحكم</button>
+            <div id="console-errors" class="log"></div>
+        </div>
+        
+        <div class="test-item">
+            <h3>8. اختبار شامل</h3>
+            <button onclick="runAllTests()">تشغيل جميع الاختبارات</button>
+            <div id="all-tests-result"></div>
+        </div>
+    </div>
+
+    <script>
+        // Store console errors
+        const consoleErrors = [];
+        const originalConsoleError = console.error;
+        console.error = function(...args) {
+            consoleErrors.push(new Date().toLocaleString() + ': ' + args.join(' '));
+            originalConsoleError.apply(console, args);
+        };
+
+        // Display page info
+        document.addEventListener('DOMContentLoaded', function() {
+            const pageInfo = document.getElementById('page-info');
+            pageInfo.innerHTML = `
+                <div class="info">
+                    <strong>URL الحالي:</strong> ${window.location.href}<br>
+                    <strong>المضيف:</strong> ${window.location.hostname}<br>
+                    <strong>البروتوكول:</strong> ${window.location.protocol}<br>
+                    <strong>المتصفح:</strong> ${navigator.userAgent}<br>
+                    <strong>الوقت:</strong> ${new Date().toLocaleString()}
+                </div>
+            `;
+        });
+
+        function testBootstrap() {
+            const result = document.getElementById('bootstrap-result');
+            result.innerHTML = '<div class="info">جاري الاختبار...</div>';
+            
+            setTimeout(() => {
+                if (typeof bootstrap !== 'undefined') {
+                    result.innerHTML = '<div class="success">✅ Bootstrap محمل بنجاح</div>';
+                } else {
+                    result.innerHTML = '<div class="error">❌ Bootstrap غير محمل</div>';
+                }
+            }, 1000);
+        }
+
+        function testFontAwesome() {
+            const result = document.getElementById('fontawesome-result');
+            result.innerHTML = '<div class="info">جاري الاختبار...</div>';
+            
+            setTimeout(() => {
+                const testIcon = document.createElement('i');
+                testIcon.className = 'fas fa-check';
+                testIcon.style.position = 'absolute';
+                testIcon.style.left = '-9999px';
+                document.body.appendChild(testIcon);
+                
+                const iconStyle = window.getComputedStyle(testIcon);
+                const fontFamily = iconStyle.fontFamily;
+                
+                document.body.removeChild(testIcon);
+                
+                if (fontFamily.includes('Font Awesome')) {
+                    result.innerHTML = '<div class="success">✅ Font Awesome محمل بنجاح</div>';
+                } else {
+                    result.innerHTML = `<div class="error">❌ Font Awesome غير محمل<br>الخط المستخدم: ${fontFamily}</div>`;
+                }
+            }, 1000);
+        }
+
+        function testGoogleFonts() {
+            const result = document.getElementById('fonts-result');
+            result.innerHTML = '<div class="info">جاري الاختبار...</div>';
+            
+            setTimeout(() => {
+                const testText = document.createElement('span');
+                testText.style.fontFamily = 'Cairo, sans-serif';
+                testText.style.position = 'absolute';
+                testText.style.left = '-9999px';
+                testText.textContent = 'test';
+                document.body.appendChild(testText);
+                
+                const textStyle = window.getComputedStyle(testText);
+                const fontFamily = textStyle.fontFamily;
+                
+                document.body.removeChild(testText);
+                
+                if (fontFamily.includes('Cairo')) {
+                    result.innerHTML = '<div class="success">✅ Google Fonts (Cairo) محمل بنجاح</div>';
+                } else {
+                    result.innerHTML = `<div class="warning">⚠️ Google Fonts قد لا يكون محمل<br>الخط المستخدم: ${fontFamily}</div>`;
+                }
+            }, 1000);
+        }
+
+        function testCustomCSS() {
+            const result = document.getElementById('css-result');
+            result.innerHTML = '<div class="info">جاري الاختبار...</div>';
+            
+            // Test if custom CSS is loaded by checking for specific styles
+            setTimeout(() => {
+                const testElement = document.createElement('div');
+                testElement.className = 'hero-section';
+                testElement.style.position = 'absolute';
+                testElement.style.left = '-9999px';
+                document.body.appendChild(testElement);
+                
+                const styles = window.getComputedStyle(testElement);
+                const background = styles.background || styles.backgroundColor;
+                
+                document.body.removeChild(testElement);
+                
+                if (background.includes('linear-gradient') || background.includes('rgb')) {
+                    result.innerHTML = '<div class="success">✅ CSS المخصص محمل بنجاح</div>';
+                } else {
+                    result.innerHTML = '<div class="error">❌ CSS المخصص غير محمل</div>';
+                }
+            }, 1000);
+        }
+
+        function testNetwork() {
+            const result = document.getElementById('network-result');
+            result.innerHTML = '<div class="info">جاري اختبار الشبكة...</div>';
+            
+            const urls = [
+                'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css',
+                'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
+                'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap'
+            ];
+            
+            let results = [];
+            let completed = 0;
+            
+            urls.forEach((url, index) => {
+                fetch(url, { method: 'HEAD' })
+                    .then(response => {
+                        results[index] = `✅ ${url.split('/').pop()}: ${response.status}`;
+                    })
+                    .catch(error => {
+                        results[index] = `❌ ${url.split('/').pop()}: خطأ`;
+                    })
+                    .finally(() => {
+                        completed++;
+                        if (completed === urls.length) {
+                            result.innerHTML = `<div class="info">${results.join('<br>')}</div>`;
+                        }
+                    });
+            });
+        }
+
+        function showConsoleErrors() {
+            const result = document.getElementById('console-errors');
+            if (consoleErrors.length === 0) {
+                result.textContent = 'لا توجد أخطاء في وحدة التحكم';
+                result.className = 'log success';
+            } else {
+                result.textContent = consoleErrors.join('\n');
+                result.className = 'log error';
+            }
+        }
+
+        function runAllTests() {
+            const result = document.getElementById('all-tests-result');
+            result.innerHTML = '<div class="info">جاري تشغيل جميع الاختبارات...</div>';
+            
+            testBootstrap();
+            testFontAwesome();
+            testGoogleFonts();
+            testCustomCSS();
+            testNetwork();
+            showConsoleErrors();
+            
+            setTimeout(() => {
+                result.innerHTML = '<div class="success">✅ تم تشغيل جميع الاختبارات. راجع النتائج أعلاه.</div>';
+            }, 2000);
+        }
+
+        // Auto-run basic tests on load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                testBootstrap();
+                testFontAwesome();
+                testGoogleFonts();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
